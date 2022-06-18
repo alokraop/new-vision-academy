@@ -1,7 +1,38 @@
+import ImageGallery from 'react-image-gallery';
 import styles from "./index.module.scss";
+
+const images = [
+  {
+    original: 'https://picsum.photos/id/1018/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+    originalTitle: 'Tooltip for image',
+    description: 'Basic caption for image',
+  },
+  {
+    original: 'https://picsum.photos/id/1015/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+    originalTitle: 'Tooltip for image',
+    description: 'Basic caption for image',
+  },
+  {
+    original: 'https://picsum.photos/id/1019/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+    originalTitle: 'Tooltip for image',
+    description: 'Basic caption for image',
+  },
+];
 
 export function Home() {
   return <div className={styles.home}>
+    <div className={styles.gallery}>
+      <div className={styles.photosContainer}>
+        <ImageGallery 
+          items={images} 
+          showNav={false}
+          showPlayButton={false}
+        />
+      </div>
+    </div>
     <section className={styles.textSection}>
       <div className={styles.textWrapper}>
         <h2>Section heading</h2>
@@ -32,7 +63,7 @@ export function Home() {
       <h2>Principal's Message</h2>
       <div className={styles.contentWithPic}>
         <div className={styles.photoWrapper}>
-          <img src="https://bishopcottonboysschool.edu.in/sites/default/files/images/pricipal_image.JPG" alt="Photo of principal" />
+          <img src="https://bishopcottonboysschool.edu.in/sites/default/files/images/pricipal_image.JPG" alt="Principal" />
         </div>
         <div className={styles.textContent}>
           <p>Dear Students,</p>
