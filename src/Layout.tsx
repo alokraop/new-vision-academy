@@ -12,7 +12,7 @@ function Layout() {
   function changeTab(name: string = "") {
     setTab(name);
     navigate(`/${name}`);
-    if(showMenu) setShowMenu(() => false);
+    if (showMenu) setShowMenu(() => false);
   }
 
   return (
@@ -29,26 +29,28 @@ function Layout() {
         </div>
         <div className={`${styles.tabs} ${showMenu ? "" : styles.hidden}`}>
           <div
-            className={`${styles.tab} ${tab === "news" ? styles.active : ""}`}
-            onClick={() => changeTab("news")}
+            className={`${styles.tab} ${
+              tab === "facilities" ? styles.active : ""
+            }`}
+            onClick={() => changeTab("facilities")}
           >
-            News
+            Facilities
           </div>
           <div
             className={`${styles.tab} ${
-              tab === "admissions" ? styles.active : ""
+              tab === "affiliation" ? styles.active : ""
             }`}
-            onClick={() => changeTab("admissions")}
+            onClick={() => changeTab("affiliation")}
           >
-            Admissions
+            Affiliation
           </div>
           <div
             className={`${styles.tab} ${
-              tab === "gallery" ? styles.active : ""
+              tab === "contact" ? styles.active : ""
             }`}
-            onClick={() => changeTab("gallery")}
+            onClick={() => changeTab("contact")}
           >
-            Gallery
+            Contact Us
           </div>
         </div>
       </nav>

@@ -12,67 +12,101 @@
   }
 }
 
-.gallery {
-  padding: 25px 15px;
-  
-  .photosContainer {
-    max-width: calc(max(1024px, 80vw));
-    margin: 0 auto;
+.banner {
+  width: 100%;
+  img {
+    max-width: 100%;
+    min-height: 30vh;
+    object-fit: cover;
+
+    @media screen and (min-width: 775px) {
+      max-height: 75vh;
+      width: 100%;
+    }
   }
 }
 
-.textSection {
-  padding: 25px 15px;
-  
-  .textWrapper {
-    max-width: calc(max(1024px, 80vw));
-    margin: 0 auto;
-  }
-
-  &:nth-child(even) {
-    background-color: hsl(114, 88%, 98%);
-  }
-
+.motto {
+  padding: 1rem;
+  background-color: #e4fde1;
   p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
   }
 }
 
-.principalMessage {
-  padding: 25px 15px;
+.messageFrom {
+  background-color: #f0fab3;
+  margin: 0 auto;
 
-  .contentWithPic {
-    max-width: calc(max(1024px, 80vw));
-    margin: 0 auto;
-
-    @media screen and (min-width: 1023px) {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
-      .photoWrapper {
-        flex-basis: 40%;
-      }
-
-      .textContent {
-        flex-basis: 40%;
-      }
+  .photoWrapper {
+    padding: 1rem 0;
+    img {
+      margin: 0 auto;
+      display: block;
+      width: 80%;
+      max-width: 350px;
     }
   }
 
-  img {
-    display: block;
-    margin: 20px auto;
-    border-radius: 50%;
+  .textContent {
+    padding: 0 1rem;
+
+    h3 {
+      font-size: 1.3rem;
+      text-align: center;
+      margin: 1rem 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.5;
+      padding-bottom: 1rem;
+    }
   }
 
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
+  &.right {
+    background-color: #E4FDE1;
   }
 
+  @media screen and (min-width: 775px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
+    .photoWrapper {
+      padding: 0;
+      width: 30%;
+      img {
+        margin: 0 auto 0 0;
+        width: 100%;
+      }
+    }
+
+    .textContent {
+      width: 70%;
+
+      h3 {
+        text-align: left;
+        margin-top: 0.8rem;
+      }
+
+      p {
+        text-align: left;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    &.right {
+      background-color: #E4FDE1;
+      flex-direction: row-reverse;
+
+      img {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
 }

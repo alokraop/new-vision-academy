@@ -61,7 +61,7 @@ export function Gallery() {
   return <div className={styles.gallery}>
     <h1>Gallery</h1>
     <div className={styles.photosContainer}>
-      {images.map(image => <img className={styles.photo} src={image.original} title={image.originalTitle} />)}
+      {images.map(image => <img className={styles.photo} src={image.original} alt={image.originalTitle} title={image.originalTitle} />)}
     </div>
   </div>;
 }
